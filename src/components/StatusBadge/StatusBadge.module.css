@@ -1,0 +1,45 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+.open {
+  background-color: var(--color-status-open-bg);
+  color: var(--color-status-open-text);
+  border-color: var(--color-status-open-border);
+}
+
+.inProgress {
+  background-color: var(--color-status-progress-bg);
+  color: var(--color-status-progress-text);
+  border-color: var(--color-status-progress-border);
+}
+
+.resolved {
+  background-color: var(--color-status-resolved-bg);
+  color: var(--color-status-resolved-text);
+  border-color: var(--color-status-resolved-border);
+}
+
+.closed {
+  background-color: var(--color-status-closed-bg);
+  color: var(--color-status-closed-text);
+  border-color: var(--color-status-closed-border); 
+}

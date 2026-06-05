@@ -1,0 +1,92 @@
+.summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition:
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.stat:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.stat.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(120 37 235 / 0.12);
+}
+
+.count {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Count colours per status */
+.countAll {
+  color: var(--color-text);
+}
+
+.countOpen {
+  color: var(--color-status-open-text);
+}
+
+.countInProgress {
+  color: var(--color-status-progress-text);
+}
+
+.countResolved {
+  color: var(--color-status-resolved-text);
+}
+
+.countClosed {
+  color: var(--color-status-closed-text);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .stat {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .count {
+    font-size: var(--font-size-xl);
+  }
+}
